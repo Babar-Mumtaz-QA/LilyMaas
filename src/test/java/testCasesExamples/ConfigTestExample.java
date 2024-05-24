@@ -25,7 +25,7 @@ public class ConfigTestExample {
 
 	@BeforeClass
     public void setUp() {
-    	ConfigFileReader configReader = new ConfigFileReader("C:\\Users\\babar.mumtaz\\SATW6\\BareGitRepo\\SATW6\\Config File\\config.properties");
+    	ConfigFileReader configReader = new ConfigFileReader("C:\\Users\\babar.mumtaz\\git\\repository\\SATW6\\Config File\\config.properties");
 
         // Read properties
         String browserType = configReader.getPropertyValues("browser.firefox");

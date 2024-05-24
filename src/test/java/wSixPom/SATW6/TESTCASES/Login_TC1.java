@@ -3,7 +3,9 @@ package wSixPom.SATW6.TESTCASES;
 import org.testng.annotations.Test;
 import wSixPom.SATW6.PAGES.BaseClass;
 import wSixPom.SATW6.PAGES.BookedFreightsPage;
+
 import wSixPom.SATW6.PAGES.LoginPage;
+
 
 public class Login_TC1 extends BaseClass{
 
@@ -12,6 +14,7 @@ public class Login_TC1 extends BaseClass{
 		 {
  
 	    LoginPage loginPage = new LoginPage(driver);
+	    
 	    loginPage.enterUsername("bob@lilymaas.com");
 	    loginPage.enterPassword("secret123");
 	    loginPage.clickLogin();

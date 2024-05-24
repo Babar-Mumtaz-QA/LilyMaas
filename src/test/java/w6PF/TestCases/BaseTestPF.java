@@ -87,7 +87,7 @@ public class BaseTestPF {
 	    private void loadConfigProperties() {
 	    try {
 	        Properties config = new Properties();
-	        FileInputStream fis = new FileInputStream("C:\\Users\\babar.mumtaz\\SATW6\\BareGitRepo\\SATW6\\Config File\\config.properties");
+	        FileInputStream fis = new FileInputStream("C:\\Users\\babar.mumtaz\\git\\repository\\SATW6\\Config File\\config.properties");
 	        config.load(fis);
 	        
 			/*
@@ -101,7 +101,7 @@ public class BaseTestPF {
 			 * } } }
 			 */
 	
-	        browser = config.getProperty("browser.firefox");
+	        browser = config.getProperty("browser.chrome");
 	        url = config.getProperty("url");
             validUsername = config.getProperty("valid.username");
             validPassword = config.getProperty("valid.password");

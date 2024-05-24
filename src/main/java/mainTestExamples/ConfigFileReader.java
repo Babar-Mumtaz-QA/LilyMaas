@@ -13,7 +13,7 @@ public class ConfigFileReader {
     	prop = new Properties();
         
     	try {
-            FileInputStream fis = new FileInputStream("C:\\Users\\babar.mumtaz\\SATW6\\BareGitRepo\\SATW6\\Config File\\config.properties");
+            FileInputStream fis = new FileInputStream("C:\\Users\\babar.mumtaz\\git\\repository\\SATW6\\Config File\\config.properties");
             prop.load(fis);
         } catch (IOException e) {
             e.printStackTrace();
