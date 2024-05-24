@@ -26,7 +26,7 @@ public class ObjectRepositoryReader {
         
     	try {
     		// need to create an object of FileInputStream class with its path pointing to the .properties file:
-            FileInputStream inputStream = new FileInputStream("C:\\Users\\babar.mumtaz\\SATW6\\BareGitRepo\\SATW6\\Config File\\ObjectRepo.properties");
+            FileInputStream inputStream = new FileInputStream("C:\\Users\\babar.mumtaz\\git\\repository\\SATW6\\Config File\\ObjectRepo.properties");
             
             propObj.load(inputStream);
         } 

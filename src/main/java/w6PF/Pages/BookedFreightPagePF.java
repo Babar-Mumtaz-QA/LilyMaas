@@ -22,7 +22,34 @@ public class BookedFreightPagePF {
 	 @CacheLookup
 	 @FindBy(className = "logout")
 	    WebElement logoutButton;
+	 
+	 @FindBy(xpath = "//button[text()='Create Freight']")
+	    WebElement CreateFreight; 
+	 
+	 @FindBy(xpath = "//input[@name='FNO']")
+	    WebElement FNO;
 	    
+	 @FindBy(xpath = "//input[@name='Loaded']")
+	    WebElement ETDdatePicker;
+		/*
+		 * 
+		 * @FindBy(xpath = "//input[@name='FNO']") WebElement ;
+		 * 
+		 * @FindBy(xpath = "//input[@name='FNO']") WebElement ;
+		 * 
+		 * @FindBy(xpath = "//input[@name='FNO']") WebElement ;
+		 * 
+		 * @FindBy(xpath = "//input[@name='FNO']") WebElement ;
+		 * 
+		 * @FindBy(xpath = "//input[@name='FNO']") WebElement ;
+		 * 
+		 * @FindBy(xpath = "//input[@name='FNO']") WebElement ;
+		 * 
+		 * @FindBy(xpath = "//input[@name='FNO']") WebElement ;
+		 * 
+		 * @FindBy(xpath = "//input[@name='FNO']") WebElement ;
+		 * 
+		 */
 	
 	//Method to capture the page heading
 	public String getHeading() {
@@ -33,5 +60,20 @@ public class BookedFreightPagePF {
 	public void clickLogout() {
 		logoutButton.click();
 	}
+	
+	public void clickCreateFreightBtn() {
+		CreateFreight.click();
+	}
+	
+	public void enterFNO(String text) {
+        // Click on date picker
+        FNO.sendKeys(text);        
+	}
+	
+	public void selectDate(String date) {
+        // Click on date picker
+        ETDdatePicker.click();       
+	}
+	
 
 }

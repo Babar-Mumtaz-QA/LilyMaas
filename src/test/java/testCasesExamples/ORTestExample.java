@@ -17,7 +17,7 @@ public class ORTestExample {
 	  WebDriver driver ;
 	  
 	  // Create an instance of ObjectRepository
-      ObjectRepositoryReader objectRepository = new ObjectRepositoryReader("C:\\Users\\babar.mumtaz\\SATW6\\BareGitRepo\\SATW6\\Config File\\ObjectRepo.properties");
+      ObjectRepositoryReader objectRepository = new ObjectRepositoryReader("C:\\Users\\babar.mumtaz\\git\\repository\\SATW6\\Config File\\ObjectRepo.properties");
 
 		
 	  @BeforeMethod
