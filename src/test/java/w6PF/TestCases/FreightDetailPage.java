@@ -50,7 +50,7 @@ public class FreightDetailPage extends BaseTestPF {
 		 */
 
 		freightListing.hoverOverLastRecord();
-		log.info("Hover over 1st Row");
+		log.info("Hover over 1st Row of records");
 
 		Thread.sleep(5000);
 
