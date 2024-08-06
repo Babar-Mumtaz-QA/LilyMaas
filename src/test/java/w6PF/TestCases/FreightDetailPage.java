@@ -56,7 +56,7 @@ public class FreightDetailPage extends BaseTestPF {
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//img[@alt='View']")));
 		freightListing.ClickOnViewFreightIcon();
-		log.info("Hover over View Icon and click");
+		log.info("Hover over View Icon and clicks");
 
 		Thread.sleep(5000);
 
