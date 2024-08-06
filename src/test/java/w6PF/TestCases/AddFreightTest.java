@@ -19,62 +19,54 @@ import w6PF.Pages.BookedFreightPagePF;
 import w6PF.Pages.LoginPagePF;
 
 public class AddFreightTest extends BaseTestPF {
-	
+
 	public static Logger log = LogManager.getLogger(LoginTestPF_1.class);
 	JavascriptExecutor js = ((JavascriptExecutor) driver);
 	Faker faker = new Faker();
 
 	@Test
-    public void AddFreight() throws InterruptedException {
-		
-    	             	   
-		LoginPagePF loginPage = PageFactory.initElements(driver, LoginPagePF.class);
-        BookedFreightPagePF bookedFreights = PageFactory.initElements(driver, BookedFreightPagePF.class);
-        
-        loginPage.login(validUsername, validPassword);
-        log.info("Entered Valid Login/Password and Click Login Button");
-        
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[text()='Create Freight']")));
+	public void AddFreight() throws InterruptedException {
 
-        bookedFreights.clickCreateFreightBtn();
-        
-        String fnoNumber = faker.number().digits(8);
-        
-        log.info("Clicked Create Freight Button");
-        bookedFreights.enterFNO(fnoNumber);
-        
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@name='Loaded']")));
-        
-        String day = "25";
-        String month = "5";
-        Thread.sleep(1000);
-        String year = "2023";
-        bookedFreights.enterDate(day, month, year);
-        
- wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@name='Arrival']")));
-        
-        String dayEta = "25";
-        Thread.sleep(1000);
-        String monthEta = "6";        
-        String yearEta = "2024";
-        bookedFreights.enterETADate(dayEta, monthEta, yearEta);
+		LoginPagePF loginPage = PageFactory.initElements(driver, LoginPagePF.class);
+		BookedFreightPagePF bookedFreights = PageFactory.initElements(driver, BookedFreightPagePF.class);
+
+		loginPage.login(validUsername, validPassword);
+		log.info("Entered Valid Login/Password and Click Login Button");
+
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[text()='Create Freight']")));
+
+		bookedFreights.clickCreateFreightBtn();
+
+		String fnoNumber = faker.number().digits(8);
+
+		log.info("Clicked Create Freight Button");
+		bookedFreights.enterFNO(fnoNumber);
+
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@name='Loaded']")));
+
+		String day = "25";
+		String month = "5";
+		Thread.sleep(1000);
+		String year = "2023";
+		bookedFreights.enterDate(day, month, year);
+
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@name='Arrival']")));
+
+		String dayEta = "25";
+		Thread.sleep(1000);
+		String monthEta = "6";
+		String yearEta = "2024";
+		bookedFreights.enterETADate(dayEta, monthEta, yearEta);
 		log.info("Entered ETA DATE");
-        
-		//bookedFreights.sendDate("02-Feb-2024");
-//        bookedFreights.sendDate("02");
-      //  bookedFreights.sendDate(Keys.TAB);
-        
-		
+
 		Thread.sleep(5000);
-		
+
 		bookedFreights.clickSaveReturnFreightBtn();
-		
+
 		bookedFreights.clickLogout();
-        
-       // js.executeScript(" document.querySelector('input[name=\"Loaded\"]').value='2022-12-12'");
-        
-        Thread.sleep(5000);
-        
+
+		Thread.sleep(5000);
+
 	}
 }
